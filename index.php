@@ -24,12 +24,20 @@ $second->add_grade(80);
 $second->add_grade(50);
 $students['a456'] = $second;
 
-$students = array($first, $second);
+$third = new Student();
+$third->surname = "Shellborn";
+$third->first_name = "Rachel";
+$third->add_email('home','rachel@shellborn.com');
+$third->add_grade(96);
+$third->add_grade(89);
+$third->add_grade(94);
+$students['z274'] = $third;
+
+ksort($students);
 
 foreach($students as $student) {
     echo $student->toString();
 }
-
 ?>
 </body>
 </html>
